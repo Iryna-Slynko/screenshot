@@ -14,7 +14,7 @@ let page;
 exports.screenshot = async (req, res) => {
     const url = req.query.url;
     if (!url) {
-      return res.send('Please provide URL as GET parameter, for example: <a href="?url=https://example.com">?url=https://example.com</a>');
+      return res.send('Please provide URL as GET parameter, for example: <a href="?url=https://example.com">?url=https://example.com</a>. You can also pass the size of the image');
     }
 
     const width = req.query.width ? parseInt(req.query.width, 10) : 1280;
